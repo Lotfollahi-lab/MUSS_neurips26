@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muss"
+version = "1.0.0"
+description = "MUSS: a multi-omics foundation model predicting single-cell gene expression from scATAC-seq"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+# Tested versions are pinned in environment.yml.
+dependencies = [
+    "torch>=2.6",
+    "numpy>=1.24,<2",
+    "scipy",
+    "h5py",
+    "lightning==2.5.6",
+    "pytorch-lightning==2.5.6",
+    "torchdata==0.11.0",
+    "pandas",
+    "scanpy",
+    "anndata",
+    "scikit-learn",
+    "threadpoolctl",
+]
+
+[project.optional-dependencies]
+# only needed to download data / weights and to rebuild the processed datasets (muss.preprocess)
+preprocess = ["pyfaidx", "safetensors", "tables", "huggingface_hub>=0.34", "kaggle"]
+test = ["pytest"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "docs/licenses/*.txt"]
+
+[tool.setuptools.packages.find]
+include = ["muss*"]

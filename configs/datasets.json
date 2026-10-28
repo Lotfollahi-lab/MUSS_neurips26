@@ -1,0 +1,31 @@
+{
+  "_comment": "Dataset paths and reference fine-tuning budgets. Build data locally before training or evaluation.",
+  "pbmc10k": {
+    "processed": "processed/pbmc/pbmc10k",
+    "devices": 4,
+    "effective_batch_size": 8,
+    "max_steps": -1,
+    "max_epochs": 80
+  },
+  "bmmc": {
+    "processed": "processed/bmmc",
+    "devices": 2,
+    "effective_batch_size": 8,
+    "max_steps": 24000,
+    "max_epochs": -1
+  },
+  "openproblems": {
+    "processed": "processed/openproblems",
+    "devices": 2,
+    "effective_batch_size": 8,
+    "max_steps": 14592,
+    "max_epochs": -1
+  },
+  "hca_bone": {
+    "processed": "processed/hca_bone",
+    "devices": 4,
+    "effective_batch_size": 16,
+    "max_steps": 24000,
+    "max_epochs": -1
+  }
+}

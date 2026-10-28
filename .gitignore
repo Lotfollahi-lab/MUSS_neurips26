@@ -1,0 +1,14 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+# outputs and downloads
+/data/
+/logs/
+runs/
+results/
+weights/
+MUSS_assets/
+*.pt
+*.ckpt

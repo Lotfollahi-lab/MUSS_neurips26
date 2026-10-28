@@ -1,0 +1,29 @@
+# Reproducible environment for preprocessing, fine-tuning and evaluation.
+#   conda env create -f environment.yml && conda activate muss && pip install -e .
+name: muss
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.8.0
+      - numpy==1.26.4
+      - scipy==1.15.3
+      - pandas==2.3.3
+      - h5py==3.15.0
+      - lightning==2.5.6
+      - pytorch-lightning==2.5.6
+      - torchdata==0.11.0
+      - anndata==0.11.4
+      - scanpy==1.11.4
+      - scikit-learn==1.3.2
+      - threadpoolctl==3.7.0
+      # downloads and preprocessing only
+      - huggingface_hub==0.36.0
+      - kaggle==1.7.4.5
+      - pyfaidx==0.9.0.3
+      - tables==3.10.1
+      - safetensors==0.6.2
+      - pytest
