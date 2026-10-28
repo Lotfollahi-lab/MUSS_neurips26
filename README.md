@@ -3,7 +3,7 @@
 Official code repository for **MUSS: A Multi-scale and Sequence-based Model for Single-cell Gene Regulation** (NeurIPS 2026).
 
 MUSS predicts gene expression from single-cell chromatin accessibility and DNA sequence
-embeddings. This repository provides data preprocessing, **PyTorch Lightning fine-tuning**
+embeddings. This repository provides data preprocessing, fine-tuning
 from the released encoder, and evaluation on PBMC10K, BMMC, Open Problems and HCA bone.
 
 ![MUSS architecture](figures/muss_overview.png)
