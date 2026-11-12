@@ -1,7 +1,6 @@
 """Building blocks of the MUSS encoder.
 
-These layers are numerically identical to the ones used to fine-tune and evaluate the
-released checkpoints. Parameter names are part of the checkpoint format; do not rename them.
+Parameter names are part of the checkpoint format; do not rename them.
 """
 
 import math
